@@ -86,6 +86,18 @@ def health():
         status=200,
         mimetype="application/json"
     )
+
+    try:
+        get_db_connection()
+        getPostCount()
+    except Exception as e:
+        response = app.response_class(
+            response = json.dumps({"result": "ERROR - unhealthy"}),
+            status=500,
+            mimetype="application/json"
+        )
+        return response
+    
     return response
 
 @app.route('/metrics')
