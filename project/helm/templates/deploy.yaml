@@ -18,7 +18,7 @@ spec:
       containers:
       - name: techtrends
         image: "kareemelazhary/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        pullPolicy: {{ .Values.image.pullPolicy }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
         ports:
