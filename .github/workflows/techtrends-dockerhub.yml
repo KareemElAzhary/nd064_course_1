@@ -9,14 +9,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: techtrends
-          flavor: latest=true
-          tags: |
-            type=semver,pattern={{version}}
+    
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -36,4 +29,4 @@ jobs:
           push: true
           context: "{{defaultContext}}:project"
           file: ./Dockerfile
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/techtrends:latest
