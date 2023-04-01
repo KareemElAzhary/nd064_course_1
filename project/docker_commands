@@ -1,11 +1,50 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+docker logs 4e51beffe26b
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+ project % docker logs 4e51beffe26b
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:2023-04-01 11:21:46,696 -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2023-04-01 11:21:46,696 -  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:2023-04-01 11:21:54,982 - 172.17.0.1 - - [01/Apr/2023 11:21:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:21:55,031 - 172.17.0.1 - - [01/Apr/2023 11:21:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2023-04-01 11:22:09,806 - Article 2020 CNCF Annual Report retrieved
+INFO:werkzeug:2023-04-01 11:22:09,809 - 172.17.0.1 - - [01/Apr/2023 11:22:09] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:09,829 - 172.17.0.1 - - [01/Apr/2023 11:22:09] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-04-01 11:22:11,338 - 172.17.0.1 - - [01/Apr/2023 11:22:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:11,355 - 172.17.0.1 - - [01/Apr/2023 11:22:11] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-04-01 11:22:13,107 - 172.17.0.1 - - [01/Apr/2023 11:22:13] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:13,128 - 172.17.0.1 - - [01/Apr/2023 11:22:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2023-04-01 11:22:21,105 - New article created with title: My Cloud Post
+INFO:werkzeug:2023-04-01 11:22:21,106 - 172.17.0.1 - - [01/Apr/2023 11:22:21] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2023-04-01 11:22:21,111 - 172.17.0.1 - - [01/Apr/2023 11:22:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:21,133 - 172.17.0.1 - - [01/Apr/2023 11:22:21] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2023-04-01 11:22:23,254 - Article My Cloud Post retrieved
+INFO:werkzeug:2023-04-01 11:22:23,255 - 172.17.0.1 - - [01/Apr/2023 11:22:23] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:23,269 - 172.17.0.1 - - [01/Apr/2023 11:22:23] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-04-01 11:22:24,535 - 172.17.0.1 - - [01/Apr/2023 11:22:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:24,551 - 172.17.0.1 - - [01/Apr/2023 11:22:24] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:2023-04-01 11:22:26,732 - Returning about page
+INFO:werkzeug:2023-04-01 11:22:26,735 - 172.17.0.1 - - [01/Apr/2023 11:22:26] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:26,756 - 172.17.0.1 - - [01/Apr/2023 11:22:26] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-04-01 11:22:28,034 - 172.17.0.1 - - [01/Apr/2023 11:22:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:28,053 - 172.17.0.1 - - [01/Apr/2023 11:22:28] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-04-01 11:22:30,878 - 172.17.0.1 - - [01/Apr/2023 11:22:30] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:40,219 - 172.17.0.1 - - [01/Apr/2023 11:22:40] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:42,398 - 172.17.0.1 - - [01/Apr/2023 11:22:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-04-01 11:22:42,414 - 172.17.0.1 - - [01/Apr/2023 11:22:42] "GET /static/css/main.css HTTP/1.1" 304 -
