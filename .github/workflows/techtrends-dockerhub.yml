@@ -13,7 +13,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          image: techtrends
+          images: techtrends
           flavor: latest=true
           tags: |
             type=semver,pattern={{version}}
